@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ViewController2.h"
-
+#import "Protocols.h"
 
 
 @interface ViewController () <VievcontrollersProtocol>

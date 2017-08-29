@@ -24,6 +24,13 @@
     [self.delegate changeBackgroundColor];
     
 }
+- (IBAction)changeColorToRedAction:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(changeBackGroundColorToRed)])
+    {
+        [self.delegate changeBackgroundColor];
+    }
+}
 - (IBAction)backAction:(id)sender
 {
     [self dismissViewControllerAnimated:YES

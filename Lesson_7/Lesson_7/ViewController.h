@@ -14,11 +14,7 @@
 //
 //@end
 
-@protocol VievcontrollersProtocol <NSObject>
 
-- (void)changeBackgroundColor;
-
-@end
 
 @interface ViewController : UIViewController
 

@@ -72,6 +72,14 @@
                                     <action selector="backAction:" destination="ehL-Ow-qYW" eventType="touchUpInside" id="WFf-Bl-DQy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8m-Bn-kSh">
+                                <rect key="frame" x="-4" y="338" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Изменить цвет на красный на первом экране "/>
+                                <connections>
+                                    <action selector="changeColorToRedAction:" destination="ehL-Ow-qYW" eventType="touchUpInside" id="CGn-Uj-R06"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -85,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kZ-BQ-VVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="128"/>
+            <point key="canvasLocation" x="465" y="127.8169014084507"/>
         </scene>
     </scenes>
 </document>
