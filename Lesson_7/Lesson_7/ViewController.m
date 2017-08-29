@@ -7,22 +7,42 @@
 //
 
 #import "ViewController.h"
+#import "ViewController2.h"
 
-@interface ViewController ()
+
+
+@interface ViewController () <VievcontrollersProtocol>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ViewController2 *secondViewController = segue.destinationViewController;
+    secondViewController.nameViewController = @"VC_2";
+    secondViewController.view.backgroundColor = [UIColor greenColor];
+//    достает контроллер для изменения параметров
+    
+    secondViewController.delegate = self;
+}
+
+#pragma mark - View Contollers Protocol
+
+- (void)changeBackgroundColor
+{
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

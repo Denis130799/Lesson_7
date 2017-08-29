@@ -1,26 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMM-ji-lQT">
+                                <rect key="frame" x="164" y="558" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-F6-dwi">
+                                <rect key="frame" x="57" y="269" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Показать ViewController 2"/>
+                                <connections>
+                                    <segue destination="ehL-Ow-qYW" kind="show" identifier="sague_1" id="r6W-Ps-3CO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-418.125" y="128.87323943661971"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="g47-ov-tgf">
+            <objects>
+                <viewController storyboardIdentifier="ViewController2" id="ehL-Ow-qYW" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mq2-vG-lt6"/>
+                        <viewControllerLayoutGuide type="bottom" id="PP6-5Y-ezp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jCh-po-nea">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZN6-yI-A0b">
+                                <rect key="frame" x="44" y="269" width="233" height="30"/>
+                                <state key="normal" title="Поменять цвет на ViewController"/>
+                                <connections>
+                                    <action selector="changeColorInViewControllerAction:" destination="ehL-Ow-qYW" eventType="touchUpInside" id="RTi-jh-Ew3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLK-sU-wAR">
+                                <rect key="frame" x="31" y="431" width="258" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bfw-tW-9bc"/>
+                                </constraints>
+                                <state key="normal" title="Вернуться назад "/>
+                                <connections>
+                                    <action selector="backAction:" destination="ehL-Ow-qYW" eventType="touchUpInside" id="WFf-Bl-DQy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LLK-sU-wAR" firstAttribute="leading" secondItem="jCh-po-nea" secondAttribute="leadingMargin" constant="15" id="Hsi-6U-BQe"/>
+                            <constraint firstItem="LLK-sU-wAR" firstAttribute="centerX" secondItem="ZN6-yI-A0b" secondAttribute="centerX" id="eb9-cb-BHP"/>
+                            <constraint firstItem="PP6-5Y-ezp" firstAttribute="top" secondItem="LLK-sU-wAR" secondAttribute="bottom" constant="107" id="lat-ms-nBW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LLK-sU-wAR" secondAttribute="trailing" constant="15" id="luS-S2-Hew"/>
+                            <constraint firstItem="ZN6-yI-A0b" firstAttribute="centerY" secondItem="jCh-po-nea" secondAttribute="centerY" id="sj3-vo-rmL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kZ-BQ-VVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="128"/>
         </scene>
     </scenes>
 </document>

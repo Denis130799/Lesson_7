@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+//@protocol BaseProtocol <NSObject>
+//
+//- (void)changeBackGroundColorToRed
+//
+//@end
+
+@protocol VievcontrollersProtocol <NSObject>
+
+- (void)changeBackgroundColor;
+
+@end
+
 @interface ViewController : UIViewController
 
 
