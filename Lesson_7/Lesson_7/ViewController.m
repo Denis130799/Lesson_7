@@ -39,11 +39,12 @@
     self.view.backgroundColor = [UIColor yellowColor];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
+- (void) changeBackGroundColorToRed
+{
+    self.view.backgroundColor = [UIColor redColor];
 }
+
+
 
 
 @end
