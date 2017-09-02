@@ -15,6 +15,7 @@
 		927DBB851F59561C00055003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927DBB831F59561C00055003 /* LaunchScreen.storyboard */; };
 		927DBB901F59561C00055003 /* Protocols_And_Delegates_HWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DBB8F1F59561C00055003 /* Protocols_And_Delegates_HWTests.m */; };
 		927DBB9B1F59561C00055003 /* Protocols_And_Delegates_HWUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DBB9A1F59561C00055003 /* Protocols_And_Delegates_HWUITests.m */; };
+		927DBBEA1F5B196400055003 /* PaymentTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DBBE91F5B196400055003 /* PaymentTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		927DBB961F59561C00055003 /* Protocols_And_Delegates_HWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Protocols_And_Delegates_HWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		927DBB9A1F59561C00055003 /* Protocols_And_Delegates_HWUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Protocols_And_Delegates_HWUITests.m; sourceTree = "<group>"; };
 		927DBB9C1F59561C00055003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927DBBA81F59AFDC00055003 /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		927DBBE81F5B196400055003 /* PaymentTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentTypeViewController.h; sourceTree = "<group>"; };
+		927DBBE91F5B196400055003 /* PaymentTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentTypeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,9 @@
 				927DBB831F59561C00055003 /* LaunchScreen.storyboard */,
 				927DBB861F59561C00055003 /* Info.plist */,
 				927DBB751F59561C00055003 /* Supporting Files */,
+				927DBBA81F59AFDC00055003 /* Protocol.h */,
+				927DBBE81F5B196400055003 /* PaymentTypeViewController.h */,
+				927DBBE91F5B196400055003 /* PaymentTypeViewController.m */,
 			);
 			path = Protocols_And_Delegates_HW;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927DBB7D1F59561C00055003 /* ViewController.m in Sources */,
+				927DBBEA1F5B196400055003 /* PaymentTypeViewController.m in Sources */,
 				927DBB7A1F59561C00055003 /* AppDelegate.m in Sources */,
 				927DBB771F59561C00055003 /* main.m in Sources */,
 			);
@@ -509,6 +517,7 @@
 				927DBBA11F59561C00055003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		927DBBA21F59561C00055003 /* Build configuration list for PBXNativeTarget "Protocols_And_Delegates_HWTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				927DBBA41F59561C00055003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		927DBBA51F59561C00055003 /* Build configuration list for PBXNativeTarget "Protocols_And_Delegates_HWUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				927DBBA71F59561C00055003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

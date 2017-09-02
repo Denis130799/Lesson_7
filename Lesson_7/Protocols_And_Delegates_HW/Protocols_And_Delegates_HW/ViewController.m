@@ -7,23 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "PaymentTypeViewController.h"
+#import "Protocol.h"
+@interface ViewController () <PaymentProtocol>
 
-@interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *paymentTypeLabel;
+
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PaymentTypeViewController *paymentVC = segue.destinationViewController;
+    paymentVC.delegate = self;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)paymentTypeWasSelected:(NSString *)text
+{
+    self.paymentTypeLabel.text = text;
 }
-
 
 @end

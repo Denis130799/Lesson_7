@@ -1,26 +1,128 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="тип оплаты " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eI-F5-d1n">
+                                <rect key="frame" x="31" y="120" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gjS-Tp-SiC"/>
+                                    <constraint firstAttribute="width" constant="150" id="lzG-5I-r7s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не выбран" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-CJ-ANX">
+                                <rect key="frame" x="201" y="120.5" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YbY-U2-UG6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF6-re-1U8">
+                                <rect key="frame" x="31" y="518" width="258" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yxs-bM-eah"/>
+                                </constraints>
+                                <state key="normal" title="Тип оплаты "/>
+                                <connections>
+                                    <segue destination="knw-AV-Gz5" kind="presentation" id="fMl-ST-hQ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rqR-CJ-ANX" firstAttribute="centerY" secondItem="3eI-F5-d1n" secondAttribute="centerY" id="7Wn-LB-TfF"/>
+                            <constraint firstItem="dF6-re-1U8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Nty-gO-g9I"/>
+                            <constraint firstItem="3eI-F5-d1n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="O8b-Zy-d5a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rqR-CJ-ANX" secondAttribute="trailing" constant="15" id="OEq-Vt-i1w"/>
+                            <constraint firstItem="3eI-F5-d1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="VDH-jm-ZLx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dF6-re-1U8" secondAttribute="trailing" constant="15" id="XzC-gY-FUF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dF6-re-1U8" secondAttribute="bottom" constant="20" id="lR0-9Y-2fv"/>
+                            <constraint firstItem="rqR-CJ-ANX" firstAttribute="leading" secondItem="3eI-F5-d1n" secondAttribute="trailing" constant="20" id="oP6-ih-8Wa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paymentTypeLabel" destination="rqR-CJ-ANX" id="fHM-Wv-NfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+        </scene>
+        <!--Payment Type View Controller-->
+        <scene sceneID="vYT-fa-00Y">
+            <objects>
+                <viewController storyboardIdentifier="PaymentTypeViewController" id="knw-AV-Gz5" customClass="PaymentTypeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZB-2M-Bk3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5uE-P5-vll"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hhz-Bs-7SQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-o8-3fT">
+                                <rect key="frame" x="145" y="269" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Master Card"/>
+                                <connections>
+                                    <action selector="paymentButtonAction:" destination="knw-AV-Gz5" eventType="touchUpInside" id="p9I-th-tSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-CT-oCH">
+                                <rect key="frame" x="164" y="334" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PayPal"/>
+                                <connections>
+                                    <action selector="paymentButtonAction:" destination="knw-AV-Gz5" eventType="touchUpInside" id="Rhg-lj-vj2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-Sp-dTh">
+                                <rect key="frame" x="147" y="398" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Web Money"/>
+                                <connections>
+                                    <action selector="paymentButtonAction:" destination="knw-AV-Gz5" eventType="touchUpInside" id="67k-2r-SIz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-Mv-bwE">
+                                <rect key="frame" x="172" y="209" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Visa"/>
+                                <connections>
+                                    <action selector="paymentButtonAction:" destination="knw-AV-Gz5" eventType="touchUpInside" id="LtH-gp-VLA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7u8-6c-Jms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="139"/>
         </scene>
     </scenes>
 </document>
